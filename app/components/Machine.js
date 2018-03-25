@@ -1,6 +1,6 @@
 /**
  *
- * App.js
+ * Machine.js
  *
  */
 import React from 'react';
@@ -8,7 +8,12 @@ import React from 'react';
 class Machine extends React.Component {
   render() {
     // Dans tous les cas, afficher
-    return <p>Machine 1</p>
+    return (
+        <div
+        className= { this.props.isActive ? "machine active" : "machine" }>
+          {this.props.name}
+        </div>
+      )
   }
 }
 
