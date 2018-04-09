@@ -4,6 +4,8 @@
  *
  */
 import React from 'react';
+import Toggle from 'react-toggle'
+import "react-toggle/style.css"
 
 class Machine extends React.Component {
   handleClick() {
@@ -20,9 +22,8 @@ class Machine extends React.Component {
         <div
         className= { this.props.isActive ? "machine active" : "machine" }>
           {this.props.name}
-          <button onClick={(e) => this.handleClick(e)} type="button" className="btn">
-          {this.props.isActive ? "desactiver" : "activer"}
-          </button>
+          <Toggle onClick={(e) => this.handleClick(e)} type="button"/>
+          
       
         </div>
         

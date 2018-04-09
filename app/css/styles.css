@@ -42,14 +42,6 @@
   text-shadow: 0px 0px 3px #CDDC39;
 }
 
-.btn {
-  background: #2196f3;
-  color: white;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-left: 25px;
-  font-size: 14px;
-}
 
 .btn:hover {
   background-color: #f44336;
