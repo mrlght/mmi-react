@@ -22,7 +22,7 @@ class Machine extends React.Component {
         <div
         className= { this.props.isActive ? "machine active" : "machine" }>
           {this.props.name}
-          <Toggle onClick={(e) => this.handleClick(e)} type="button"/>
+          <Toggle onClick={(e) => this.handleClick(e)} type="button" defaultChecked={this.props.isActive ? true : false} />
           
       
         </div>
