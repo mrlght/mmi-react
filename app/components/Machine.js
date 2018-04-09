@@ -10,6 +10,7 @@ class Machine extends React.Component {
     console.log("blbl");
     console.log(this.props.name);
      this.props.handleStatusChange(this.props.index);
+     console.log(this.props.isActive);
   }
 
   
@@ -20,7 +21,7 @@ class Machine extends React.Component {
         className= { this.props.isActive ? "machine active" : "machine" }>
           {this.props.name}
           <button onClick={(e) => this.handleClick(e)} type="button" className="btn">
-          Toggle
+          {this.props.isActive ? "desactiver" : "activer"}
           </button>
       
         </div>

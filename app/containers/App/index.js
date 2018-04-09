@@ -52,9 +52,13 @@ class App extends React.Component {
     const machines = { ...this.state.machines };
     // 2. On modifie le status de CETTE machine
     if (machines[key].isActive == true)
-    {machines[key].isActive = false;}
+    {machines[key].isActive = false;
+      
+    }
     else
-    {machines[key].isActive = true;}
+    {machines[key].isActive = true;
+       
+    }
     // Pour vérifier la nouvelle collection dans la console :
     console.log({ machines });
 
