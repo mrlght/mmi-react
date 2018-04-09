@@ -51,6 +51,7 @@ class App extends React.Component {
     // 1. On copie le state existant
     const machines = { ...this.state.machines };
     // 2. On modifie le status de CETTE machine
+    
     if (machines[key].isActive == true)
     {machines[key].isActive = false;
       
@@ -65,11 +66,33 @@ class App extends React.Component {
     // 3. On applique cette nouvelle collection au state
     this.setState({ machines });
   }
+  
+  
+    compteurActive() {
+    //on initialise le compteur
+    let compteur = 0;
+    //on boucle pour compter les machines activées
+    this.state.machines.forEach((element) =>
+    {if (element.isActive == true)
+        {compteur = compteur + 1;
+            }
+        }
+        
+    )
+    
+    console.log(compteur);
+    return compteur
+    
+  }
 
   render() {
     return (
       <div className="main">
-        <Header/>
+        <Header>
+        <span> nombre de machines: {this.state.machines.length} </span>
+        // ça fonctionne mais ca créé une erreur quand on touche aux boutons. et puis ça s'affiche pas dans le header.
+        <span> nombre de machines actives: {this.compteurActive()} </span>
+        </Header>
           {/*Conteneur de notre liste*/}
           <div className="machines-list">
             {/*Boucle sur notre collection de machines*/}
@@ -85,6 +108,8 @@ class App extends React.Component {
                          isActive={this.state.machines[key].isActive}/>
               )}
           </div>
+           <span> nombre de machines: {this.state.machines.length} </span>
+           <span> nombre de machines actives: {this.compteurActive()} </span>
         <Footer/>
       </div>
     );

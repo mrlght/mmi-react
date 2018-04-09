@@ -28,8 +28,10 @@ class Machine extends React.Component {
         </div>
         
       )
+    
   }
+  
 }
-
+ <span> oui </span>
 // Le composant sera accessible avec le nom "Machine"
 export default Machine;
